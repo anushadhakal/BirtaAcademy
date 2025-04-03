@@ -1,0 +1,241 @@
+/* components/Enroll/Enroll.module.css */
+.enroll {
+    padding: 5rem 0;
+    background: linear-gradient(135deg, #0000ff 0%, #3a2367 100%);
+    color: white;
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .enroll::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('/pattern-dots.png');
+    opacity: 0.1;
+  }
+  
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+    position: relative;
+    z-index: 1;
+  }
+  
+  .content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 4rem;
+  }
+  
+  .textContent {
+    flex: 1;
+    max-width: 550px;
+  }
+  
+  .title {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 1.5rem;
+    position: relative;
+    display: inline-block;
+  }
+  
+  .title::after {
+    content: '';
+    position: absolute;
+    width: 80px;
+    height: 4px;
+    background-color: white;
+    bottom: -10px;
+    left: 0;
+  }
+  
+  .description {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    margin-bottom: 2.5rem;
+    opacity: 0.9;
+  }
+  
+  .features {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+  
+  .featureItem {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    background-color: rgba(255, 255, 255, 0.1);
+    padding: 1.2rem;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+  }
+  
+  .featureItem:hover {
+    background-color: rgba(255, 255, 255, 0.15);
+    transform: translateX(10px);
+  }
+  
+  .featureIcon {
+    font-size: 1.8rem;
+    color: white;
+    width: 60px;
+    height: 60px;
+    background-color: rgba(255, 255, 255, 0.2);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .featureText h3 {
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+  }
+  
+  .featureText p {
+    font-size: 0.9rem;
+    opacity: 0.8;
+  }
+  
+  .formContainer {
+    flex: 1;
+    max-width: 500px;
+  }
+  
+  .formWrapper {
+    background-color: white;
+    border-radius: 10px;
+    padding: 2.5rem;
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2);
+    animation: fadeInUp 1s ease-in-out;
+  }
+  .formWrapper h3 span {
+    position: relative;  /* Add this */
+    display: inline-block; /* Ensures span behaves like a box */
+}
+
+.formWrapper h3 span::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60px;
+    height: 3px;
+    background-color: blue; /* Make sure color is specified */
+}
+
+  .formTitle {
+    font-size: 1.5rem;
+    color: #333;
+    margin-bottom: 1.5rem;
+    text-align: center;
+    font-weight: 700;
+  }
+  .formTitle span { 
+    color: #0000ff;
+    
+  }
+  .form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+  }
+  
+  .formGroup {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+  
+  .formGroup label {
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: #333;
+  }
+  
+  .formGroup input, 
+  .formGroup select, 
+  .formGroup textarea {
+    padding: 0.8rem 1rem;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+  }
+  
+  .formGroup input:focus, 
+  .formGroup select:focus, 
+  .formGroup textarea:focus {
+    border-color: #0000ff;
+    outline: none;
+    box-shadow: 0 0 0 2px rgba(75, 45, 131, 0.2);
+  }
+  
+  .submitButton {
+    background-color: #0000ff;
+    color: white;
+    border: none;
+    padding: 1rem;
+    border-radius: 4px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin-top: 1rem;
+    box-shadow: 0 4px 10px rgba(75, 45, 131, 0.3);
+  }
+  
+  .submitButton:hover {
+    background-color: white;
+    color : #0000ff;
+    border : 1px solid #0000ff;
+    transform: translateY(-3px);
+    box-shadow: 0 8px 15px rgba(75, 45, 131, 0.4);
+  }
+  
+  @keyframes fadeInUp {
+    from {
+      opacity: 0;
+      transform: translateY(40px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  @media screen and (max-width: 992px) {
+    .content {
+      flex-direction: column;
+      gap: 3rem;
+    }
+    
+    .textContent, .formContainer {
+      max-width: 100%;
+    }
+  }
+  
+  @media screen and (max-width: 768px) {
+    .title {
+      font-size: 2rem;
+    }
+    
+    .description {
+      font-size: 1rem;
+    }
+    
+    .formWrapper {
+      padding: 1.5rem;
+    }
+  }

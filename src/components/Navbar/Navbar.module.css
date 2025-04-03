@@ -1,0 +1,174 @@
+/* components/Navbar/Navbar.module.css */
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #0000ff ;
+    transition: all 0.3s ease-in-out;
+    padding: 1rem 0;
+    z-index: 1000;
+}
+
+
+.scrolled {
+      background-color: #0000ff ;
+    
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    padding: 0.5rem 0;
+  }
+  
+  .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+  }
+  
+  .logoContainer {
+    display: flex;
+    align-items: center;
+  }
+  
+  .logo {
+    height: 60px;
+    width: 80px;
+    margin-right: 10px;
+    background-color: white;
+    border: 1px solid black;
+    border-radius: 50%;
+  }
+  
+  .logo img {
+    height: 100%;
+    width: 100%;
+    object-fit: contain;
+  }
+  
+  .brandName {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: white; /* Birta Purple color from the website */
+  }
+  .brandName span {
+    color : rgb(255, 184, 3);
+  }
+  
+  .navLinks {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    align-items: center;
+  }
+  
+  .navLinks li {
+    margin-left: 2rem;
+  }
+  
+  .navLinks a {
+    text-decoration: none;
+    color: white;
+    font-weight: 500;
+    font-size: 1rem;
+    transition: color 0.3s ease;
+    position: relative;
+  }
+  
+  .navLinks a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 2px;
+    background-color: white;
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.3s ease;
+}
+
+.navLinks a:hover {
+    color: #f0f0f0; /* Slightly lighter text on hover */
+}
+
+.navLinks a:hover::after {
+    transform: scaleX(1); /* Expands the underline */
+}
+  
+  .enrollButton {
+    background-color: #eaa226;
+    color: white !important;
+    padding: 0.7rem 1.5rem;
+    border-radius: 20px;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 10px rgba(75, 45, 131, 0.3);
+  }
+  
+  .enrollButton:hover {
+    background-color: white;
+    color:  #0000ff!important;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 15px rgba(75, 45, 131, 0.4);
+  }
+  
+  .enrollButton::after {
+    display: none;
+  }
+  
+  .mobileMenuButton {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+
+  }
+  
+  .bar {
+    width: 25px;
+    height: 3px;
+    background-color: #333;
+    margin: 3px 0;
+    transition: 0.4s;
+  }
+  
+  @media screen and (max-width: 768px) {
+    .mobileMenuButton {
+      display: flex;
+    }
+  
+    .navLinks {
+      position: absolute;
+      top: 100%;
+      left: 0;
+      right: 0;
+      background-color: #ffffff;
+      
+      flex-direction: column;
+      align-items: center;
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.5s ease;
+    }
+    
+    .navLinks.active {
+      
+        
+        max-height: 500px;
+        padding: 1rem 0;
+    }
+    .navLinks.active a{
+
+        color: #0000ff 
+    }
+    .navLinks li {
+      margin: 1rem 0;
+      
+    }
+  
+    .scrolled {
+      padding: 0.5rem 0;
+    }
+  }

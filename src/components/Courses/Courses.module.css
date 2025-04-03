@@ -1,0 +1,209 @@
+/* components/Courses/Courses.module.css */
+.courses {
+    padding: 8rem 0 5rem;
+    background-color: #f8f9fa;
+    position: relative;
+  }
+  
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+  }
+  
+  .sectionHeader {
+    text-align: center;
+    margin-bottom: 3rem;
+  }
+  
+  .sectionTitle {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #333;
+    margin-bottom: 1rem;
+    position: relative;
+    display: inline-block;
+  }
+  
+  .sectionTitle span {
+    color: #0000ff;
+  }
+  
+  .sectionTitle::after {
+    content: '';
+    position: absolute;
+    width: 80px;
+    height: 4px;
+    background-color: #0000ff;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  
+  .sectionDescription {
+    font-size: 1.1rem;
+    color: #666;
+    max-width: 800px;
+    margin: 0 auto;
+  }
+  
+  .categories {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin-bottom: 3rem;
+  }
+  
+  .categoryButton {
+    padding: 0.8rem 1.5rem;
+    background-color: transparent;
+    border: 1px solid #ddd;
+    border-radius: 30px;
+    font-size: 0.9rem;
+    font-weight: 500;
+    color: #666;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+  
+  .categoryButton:hover {
+    background-color: rgba(75, 45, 131, 0.1);
+    color: #0000ff;
+    border-color: #0000ff;
+  }
+  
+  .categoryButton.active {
+    background-color: #0000ff;
+    color: white;
+    border-color: #0000ff;
+    box-shadow: 0 4px 10px rgba(75, 45, 131, 0.3);
+  }
+  
+  .courseGrid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+    gap: 2rem;
+  }
+  
+  .courseCard {
+    background-color: white;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .courseCard:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
+  }
+  
+  .courseImage {
+    height: 200px;
+    overflow: hidden;
+  }
+  
+  .courseImage img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+  }
+  
+  .courseCard:hover .courseImage img {
+    transform: scale(1.1);
+  }
+  
+  .courseDetails {
+    padding: 1.5rem;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .courseTitle {
+    font-size: 1.3rem;
+    font-weight: 700;
+    color: #333;
+    margin-bottom: 1rem;
+  }
+  
+  .courseDescription {
+    font-size: 0.9rem;
+    color: #666;
+    margin-bottom: 1.5rem;
+    line-height: 1.6;
+    flex-grow: 1;
+  }
+  
+  .courseInfo {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 1.5rem;
+  }
+  
+  .courseInfoItem {
+    display: flex;
+    align-items: center;
+    font-size: 0.9rem;
+    color: #666;
+  }
+  
+  .courseInfoItem i {
+    margin-right: 0.5rem;
+    color: #0000ff;
+  }
+  
+  .viewCourseButton {
+    display: inline-block;
+    padding: 0.8rem 1.5rem;
+    background-color: #0000ff;
+    color: white;
+    border-radius: 4px;
+    font-weight: 600;
+    text-decoration: none;
+    text-align: center;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 10px rgba(75, 45, 131, 0.3);
+  }
+  
+  .viewCourseButton:hover {
+    background-color: white;
+    color: #0000ff;
+    border : 1px solid #0000ff;
+    transform: translateY(-3px);
+    box-shadow: 0 8px 15px rgba(75, 45, 131, 0.4);
+  }
+  
+  @media screen and (max-width: 768px) {
+    .courseGrid {
+      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    }
+    
+    .categories {
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+    
+    .categoryButton {
+      margin-bottom: 0.5rem;
+    }
+  }
+  
+  @media screen and (max-width: 480px) {
+    .courseGrid {
+      grid-template-columns: 1fr;
+    }
+    
+    .sectionTitle {
+      font-size: 2rem;
+    }
+    
+    .sectionDescription {
+      font-size: 1rem;
+    }
+  }
