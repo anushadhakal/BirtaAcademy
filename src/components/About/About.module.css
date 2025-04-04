@@ -1,6 +1,6 @@
 .aboutSection {
   position: relative;
-  padding: 8vh 0 4vh;
+  padding: 1vh 0 4vh;
   overflow: hidden;
   background-color: #f8f9fa;
 }
@@ -218,6 +218,11 @@
     width: 90%;
   }
   
+  .imageContainer {
+    padding: 0 10px;
+    margin-top: -60px;
+  }
+  
   .contentSection {
     order: 1;
     text-align: center;
@@ -244,27 +249,28 @@
     padding: 5vh 0 2vh;
   }
   
-  .aboutContainer {
-    width: 100%;
-    padding: 2vh 5vw;
-  }
   
-  .photoSection,
-  .contentSection {
-    width: 100%;
+    .aboutContainer {
+      width: 100%;
+      padding: 2vh 5vw;
+    }
+    
+    .photoSection,
+    .contentSection {
+      width: 100%;
+    }
+    
+    .imageContainer {
+      height: 40vh;
+    }
+    
+    .statCard {
+      min-width: 100%;
+      margin-bottom: 3vh;
+    }
+    
+    .statsContainer {
+      width: 100%;
+      padding: 0 5vw;
+    }
   }
-  
-  .imageContainer {
-    height: 40vh;
-  }
-  
-  .statCard {
-    min-width: 100%;
-    margin-bottom: 3vh;
-  }
-  
-  .statsContainer {
-    width: 100%;
-    padding: 0 5vw;
-  }
-}

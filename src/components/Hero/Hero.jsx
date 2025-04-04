@@ -1,5 +1,6 @@
 import React from "react";
 import styles from "./Hero.module.css";
+import image from "../../assets/cuteGirl7.jpg"; // Adjust the path as necessary
 
 const Hero = () => {
   return (
@@ -27,7 +28,7 @@ const Hero = () => {
         <div className={styles.imageContainer}>
           <div className={styles.image}>
             <img
-              src="https://imgs.search.brave.com/5ONY6swdLSLpfRhZ2zTJEPEaS_vVgC8x6tKSokWaQjI/rs:fit:500:0:0:0/g:ce/aHR0cHM6Ly93d3cu/aHVic3BvdC5jb20v/aHMtZnMvaHViZnMv/aG93LXRvLXN0YXJ0/LWNvZGluZy0xLmpw/Zz93aWR0aD02MDIm/aGVpZ2h0PTMwMCZu/YW1lPWhvdy10by1z/dGFydC1jb2Rpbmct/MS5qcGc"
+              src={image}
               alt="Students coding"
             />
           </div>
