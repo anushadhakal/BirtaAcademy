@@ -4,7 +4,7 @@
     left: 0;
     right: 0;
     bottom: 0;
-    background-color: rgba(0, 0, 255, 0.85);
+    background-color: rgba(25, 25, 26, 0.85);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -32,7 +32,7 @@
     transform: translateY(30px);
     animation: slideUp 0.4s ease-out forwards;
     scrollbar-width: thin;
-    scrollbar-color: #0000ff #f1f1f1;
+    scrollbar-color: black
   }
   
   .modalContent::-webkit-scrollbar {
@@ -94,7 +94,7 @@
     border: none;
     font-size: 32px;
     cursor: pointer;
-    color: #0000ff;
+    color: black;
     width: 40px;
     height: 40px;
     display: flex;

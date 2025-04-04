@@ -1,4 +1,3 @@
-// components/Hero/Hero.jsx
 import React from "react";
 import styles from "./Hero.module.css";
 
@@ -37,15 +36,15 @@ const Hero = () => {
         </div>
         <div>
           <a
-            href={`https://wa.me/9867392158`}
-            className={styles.whatsappFloat} // Use CSS Module class
+            href={`https://wa.me/9861474074`}
+            className={styles.whatsappFloat} 
             target="_blank"
             rel="noopener noreferrer"
           >
             <img
               src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg"
               alt="WhatsApp Chat"
-              className={styles.whatsappIcon} // Use CSS Module class
+              className={styles.whatsappIcon} 
             />
           </a>
         </div>

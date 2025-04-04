@@ -1,4 +1,3 @@
-// components/Courses/Courses.jsx
 import React, { useState } from 'react';
 import styles from './Courses.module.css';
 import CourseDetails from '../CourseDetail/CourseDetail';

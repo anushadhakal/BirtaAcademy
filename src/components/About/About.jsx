@@ -1,43 +1,9 @@
-import React, { useEffect, useRef } from 'react';
+import React, { useEffect } from 'react';
 import { FaUserGraduate, FaChalkboardTeacher, FaBook, FaChartLine } from 'react-icons/fa';
 import styles from './About.module.css';
 
 const About = () => {
-  const bubbleContainerRef = useRef(null);
   
-  useEffect(() => {
-    // Create bubbles dynamically
-    const createBubbles = () => {
-      const container = bubbleContainerRef.current;
-      if (!container) return;
-      
-      // Clear existing bubbles
-      container.innerHTML = '';
-      
-      // Create new bubbles
-      for (let i = 0; i < 20; i++) {
-        const bubble = document.createElement('div');
-        bubble.className = styles.bubble;
-        
-        // Random bubble properties
-        const size = Math.random() * 60 + 10;
-        bubble.style.width = `${size}px`;
-        bubble.style.height = `${size}px`;
-        bubble.style.left = `${Math.random() * 100}%`;
-        bubble.style.top = `${Math.random() * 100}%`;
-        bubble.style.animationDelay = `${Math.random() * 5}s`;
-        bubble.style.animationDuration = `${Math.random() * 10 + 5}s`;
-        
-        container.appendChild(bubble);
-      }
-    };
-    
-    createBubbles();
-    
-    // Recreate bubbles on window resize
-    window.addEventListener('resize', createBubbles);
-    return () => window.removeEventListener('resize', createBubbles);
-  }, []);
   
   const stats = [
     {
@@ -64,7 +30,6 @@ const About = () => {
   
   return (
     <section id='about' className={styles.aboutSection}>
-      <div className={styles.bubbleContainer} ref={bubbleContainerRef}></div>
       
       <div className={styles.aboutContainer}>
         <div className={styles.photoSection}>

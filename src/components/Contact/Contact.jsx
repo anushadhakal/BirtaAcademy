@@ -21,9 +21,6 @@ const ContactUs = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    console.log('Form data submitted:', formData);
-    // Here you would typically send the data to your backend
-    alert('Thanks for contacting us! We will get back to you soon.');
     setFormData({
       name: '',
       email: '',
@@ -74,10 +71,6 @@ const ContactUs = () => {
                 <p>info@birtasoft.com</p>
               </div>
             </div>
-            
-         
-            
-           
           </div>
 
           <div className={styles.contactForm}>

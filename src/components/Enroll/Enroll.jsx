@@ -1,37 +1,22 @@
-// components/Enroll/Enroll.jsx
 import React, { useState } from 'react';
 import styles from './Enroll.module.css';
 
 const Enroll = () => {
-  const [formData, setFormData] = useState({
-    name: '',
-    email: '',
-    phone: '',
-    course: '',
-    message: ''
-  });
+ let [name,setName]=useState("");
+ let [email,setEmail]=useState("");
+  let [phone,setPhone]=useState("");  
+  let [course,setCourse]=useState("");
+  let [message,setMessage]=useState("");
 
-  const handleChange = (e) => {
-    const { name, value } = e.target;
-    setFormData(prevState => ({
-      ...prevState,
-      [name]: value
-    }));
-  };
+
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    // Form submission logic would go here
-    console.log('Form submitted:', formData);
-    // Reset form after submission
-    setFormData({
-      name: '',
-      email: '',
-      phone: '',
-      course: '',
-      message: ''
-    });
-    alert('Thank you for your interest! We will contact you soon.');
+    setName('');
+    setEmail('');
+    setPhone('');
+    setCourse('');
+    setMessage('');
   };
 
   return (
@@ -85,8 +70,8 @@ const Enroll = () => {
                     type="text"
                     id="name"
                     name="name"
-                    value={formData.name}
-                    onChange={handleChange}
+                    value={name}
+                    onChange={(e)=>setName(e.target.value)}
                     required
                     placeholder="Enter your full name"
                   />
@@ -97,8 +82,8 @@ const Enroll = () => {
                     type="email"
                     id="email"
                     name="email"
-                    value={formData.email}
-                    onChange={handleChange}
+                    value={email}
+                    onChange={(e)=>setEmail(e.target.value)}
                     required
                     placeholder="Enter your email address"
                   />
@@ -109,8 +94,8 @@ const Enroll = () => {
                     type="tel"
                     id="phone"
                     name="phone"
-                    value={formData.phone}
-                    onChange={handleChange}
+                    value={phone}
+                    onChange={(e)=>setPhone(e.target.value)}
                     required
                     placeholder="Enter your phone number"
                   />
@@ -120,8 +105,8 @@ const Enroll = () => {
                   <select
                     id="course"
                     name="course"
-                    value={formData.course}
-                    onChange={handleChange}
+                    value={course}
+                    onChange={(e)=>setCourse(e.target.value)}
                     required
                   >
                     <option value="">Select a course</option>
@@ -138,8 +123,8 @@ const Enroll = () => {
                   <textarea
                     id="message"
                     name="message"
-                    value={formData.message}
-                    onChange={handleChange}
+                    value={message}
+                    onChange={(e)=>setMessage(e.target.value)}
                     placeholder="Any additional information you'd like to share"
                     rows="4"
                   ></textarea>

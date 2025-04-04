@@ -70,7 +70,7 @@ const Footer = () => {
                 </li>
                 <li>
                   <i className="fas fa-clock"></i>
-                  <span>Mon - Fri: 9:00 AM - 6:00 PM</span>
+                  <span>Sun - Fri: 9:00 AM - 6:00 PM</span>
                 </li>
               </ul>
             </div>

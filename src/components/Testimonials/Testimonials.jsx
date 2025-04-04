@@ -9,7 +9,7 @@ const Testimonials = () => {
   const testimonials = [
     {
       id: 1,
-      name: 'Rahul Sharma',
+      name: 'Shital Aryal',
       role: 'Web Developer',
       company: 'TechSolutions',
       image: 'https://placehold.co/600x400',
@@ -17,7 +17,7 @@ const Testimonials = () => {
     },
     {
       id: 2,
-      name: 'Priya Patel',
+      name: 'Ram Patel',
       role: 'Mobile App Developer',
       company: 'AppWorks',
       image: 'https://placehold.co/600x400',
@@ -25,7 +25,7 @@ const Testimonials = () => {
     },
     {
       id: 3,
-      name: 'Arun Kumar',
+      name: 'Laxman Kumar',
       role: 'Data Scientist',
       company: 'DataInsights',
       image: 'https://placehold.co/600x400',
@@ -33,7 +33,7 @@ const Testimonials = () => {
     },
     {
       id: 4,
-      name: 'Neha Gupta',
+      name: 'Bharat Koirala',
       role: 'UI/UX Designer',
       company: 'DesignHub',
       image: 'https://placehold.co/600x400',

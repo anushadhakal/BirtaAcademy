@@ -1,4 +1,3 @@
-/* components/Enroll/Enroll.module.css */
 .enroll {
     padding: 5rem 0;
     background: linear-gradient(135deg, #0000ff 0%, #3a2367 100%);
@@ -120,8 +119,8 @@
     animation: fadeInUp 1s ease-in-out;
   }
   .formWrapper h3 span {
-    position: relative;  /* Add this */
-    display: inline-block; /* Ensures span behaves like a box */
+    position: relative;  
+    display: inline-block; 
 }
 
 .formWrapper h3 span::after {
@@ -132,7 +131,7 @@
     transform: translateX(-50%);
     width: 60px;
     height: 3px;
-    background-color: blue; /* Make sure color is specified */
+    background-color: blue; 
 }
 
   .formTitle {

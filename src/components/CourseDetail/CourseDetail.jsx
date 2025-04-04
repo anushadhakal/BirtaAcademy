@@ -1,29 +1,21 @@
-// components/CourseDetails/CourseDetails.jsx
 import React, { useEffect, useState } from 'react';
 import styles from './CourseDetail.module.css';
 
 const CourseDetails = ({ course, onClose }) => {
   const [isClosing, setIsClosing] = useState(false);
-
-  // Handle closing animation
   const handleClose = () => {
     setIsClosing(true);
     setTimeout(() => {
       onClose();
-    }, 300); // Match this with the animation duration
+    }, 300); 
   };
-
-  // Prevent body scrolling when modal is open
   useEffect(() => {
     document.body.style.overflow = 'hidden';
-    
-    // Cleanup function to restore scrolling when modal is closed
     return () => {
       document.body.style.overflow = 'auto';
     };
   }, []);
 
-  // Handle ESC key press
   useEffect(() => {
     const handleEscKey = (e) => {
       if (e.key === 'Escape') {
@@ -40,24 +32,16 @@ const CourseDetails = ({ course, onClose }) => {
 
   if (!course) return null;
 
-  // Function to handle Apply Now button click
   const handleApplyNow = () => {
-    // Close the modal
     handleClose();
-    
-    // After modal closes, redirect to enroll section
     setTimeout(() => {
-      // Get the enroll section element
       const enrollSection = document.getElementById('enroll');
-      
-      // If the section exists, scroll to it
       if (enrollSection) {
         enrollSection.scrollIntoView({ behavior: 'smooth' });
       } else {
-        // If no specific section exists, you can redirect to a URL
         window.location.href = '/#enroll';
       }
-    }, 350); // Slightly longer than modal close animation
+    }, 350); 
   };
 
   return (

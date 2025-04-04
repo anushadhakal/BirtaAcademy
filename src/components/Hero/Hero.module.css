@@ -1,43 +1,12 @@
-/* components/Hero/Hero.module.css */
 .hero {
-  padding-top: 100px;
+  padding: 100px 0 100px;
   min-height: 100vh;
   background: linear-gradient(135deg, #f5f7fa 0%, #e9eef6 100%);
   position: relative;
   overflow: hidden;
-}
-
-/* Animated background elements */
-.backgroundBubbles::before,
-.backgroundBubbles::after {
-  content: '';
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  top: 0;
-  left: 0;
-  pointer-events: none;
-}
-
-.backgroundBubbles::before {
-  background: radial-gradient(circle at 15% 50%, rgba(0, 0, 255, 0.08) 0%, rgba(0, 0, 255, 0) 45%),
-             radial-gradient(circle at 85% 30%, rgba(0, 0, 255, 0.08) 0%, rgba(0, 0, 255, 0) 45%);
-  animation: pulseBackground 15s infinite alternate;
-}
-
-.backgroundBubbles::after {
-  background-image: 
-    radial-gradient(6px 6px at 60px 300px, #0000ff 50%, transparent 50%),
-    radial-gradient(8px 8px at 160px 100px, #0000ff 50%, transparent 50%),
-    radial-gradient(4px 4px at 320px 250px, #0000ff 50%, transparent 50%),
-    radial-gradient(10px 10px at 480px 120px, #0000ff 50%, transparent 50%),
-    radial-gradient(6px 6px at 580px 330px, #0000ff 50%, transparent 50%),
-    radial-gradient(8px 8px at 720px 80px, #0000ff 50%, transparent 50%),
-    radial-gradient(4px 4px at 850px 280px, #0000ff 50%, transparent 50%);
-  background-repeat: no-repeat;
-  opacity: 0.5;
-  filter: blur(1px);
-  animation: floatingBubbles 25s infinite linear;
+  margin-top: 70px;
+  margin-bottom: 40px;
+  height: fit-content;
 }
 
 .whatsappFloat {
@@ -89,18 +58,18 @@
 .container {
   max-width: 1200px;
   margin: 0 auto;
-  padding: 4rem 2rem;
+  padding: 0 2rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
   position: relative;
   z-index: 5;
-  margin-top : 50px;
+  gap: 4rem;
 }
 
 .content {
   flex: 1;
-  max-width: 600px;
+  max-width: 550px;
   animation: fadeInUp 1.2s cubic-bezier(0.215, 0.61, 0.355, 1);
 }
 
@@ -108,7 +77,7 @@
   font-size: 3.8rem;
   font-weight: 800;
   line-height: 1.1;
-  margin-bottom: 1.5rem;
+  margin-bottom: 2rem;
   color: #333;
   text-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
 }
@@ -136,13 +105,13 @@
   font-size: 1.3rem;
   line-height: 1.7;
   color: #555;
-  margin-bottom: 2.5rem;
+  margin-bottom: 3rem;
   animation: fadeIn 1.8s ease-in-out;
 }
 
 .buttons {
   display: flex;
-  gap: 1.5rem;
+  gap: 2.5rem;
 }
 
 .primaryButton, .secondaryButton {
@@ -186,12 +155,52 @@
   background-color: transparent;
   color: #0000ff;
   border: 2px solid #0000ff;
+  animation: buttonFloat 3s ease-in-out infinite;
 }
 
 .secondaryButton:hover {
   background-color: rgba(0, 0, 255, 0.05);
-  transform: translateY(-5px);
-  box-shadow: 0 15px 25px rgba(0, 0, 255, 0.2);
+  transform: translateY(-5px) scale(1.05);
+  box-shadow: 0 20px 30px rgba(0, 0, 255, 0.3);
+}
+
+.secondaryButton::before {
+  content: '';
+  position: absolute;
+  width: 15px;
+  height: 15px;
+  background-color: #f97316;
+  top: 10px;
+  left: 20px;
+  clip-path: polygon(0% 40%, 40% 40%, 40% 0%, 60% 0%, 60% 40%, 100% 40%, 100% 60%, 60% 60%, 60% 100%, 40% 100%, 40% 60%, 0% 60%);
+  animation: crossBubbleFloat 7s linear infinite;
+}
+
+.secondaryButton::after {
+  content: '';
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  background-color: red;
+  bottom: 15px;
+  right: 20px;
+  border-radius: 100%;
+  transform: perspective(100px) rotateY(-15deg);
+  clip-path: polygon(0% 0%, 85% 0%, 100% 15%, 100% 100%, 0% 100%);
+  animation: bookBubbleFloat 8s linear infinite reverse;
+}
+
+.secondaryButton span {
+  position: relative;
+  z-index: 2;
+}
+
+.secondaryButton:hover::before {
+  animation-duration: 3s;
+}
+
+.secondaryButton:hover::after {
+  animation-duration: 4s;
 }
 
 .imageContainer {
@@ -232,7 +241,7 @@
   transform: scale(1.05);
 }
 
-.shape1, .shape2, .shape3, .shape4 {
+.shape1, .shape2 {
   position: absolute;
   border-radius: 50%;
   z-index: 1;
@@ -256,38 +265,21 @@
   animation: float 10s ease-in-out infinite reverse;
 }
 
-.shape3 {
-  width: 80px;
-  height: 80px;
-  background-color: rgba(0, 0, 255, 0.2);
-  top: 40%;
-  right: 10%;
-  animation: floatAndSpin 12s linear infinite;
-}
-
-.shape4 {
-  width: 120px;
-  height: 120px;
-  border: 3px solid rgba(0, 0, 255, 0.2);
-  background-color: transparent;
-  top: 20%;
-  left: 0;
-  animation: pulse 5s ease-in-out infinite alternate;
-}
-
 .statistics {
   display: flex;
   justify-content: space-around;
   background-color: white;
   border-radius: 16px;
   box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
-  padding: 2.5rem;
+  padding: 3rem 2.5rem;
   margin: 0 auto;
+  margin-top: 4rem;
   max-width: 1000px;
   position: relative;
-  bottom: -50px;
+  bottom: -30px;
   z-index: 10;
   transition: all 0.5s ease;
+  gap: 1.5rem;
 }
 
 .statistics:hover {
@@ -299,8 +291,9 @@
   text-align: center;
   animation: fadeInDelay 2s ease-in-out;
   transition: all 0.3s ease;
-  padding: 1rem;
+  padding: 1.5rem;
   border-radius: 8px;
+  margin: 0 1rem;
 }
 
 .statItem:hover {
@@ -325,7 +318,6 @@
   font-weight: 500;
 }
 
-/* Enhanced animations */
 @keyframes fadeIn {
   from {
     opacity: 0;
@@ -481,131 +473,6 @@
   }
 }
 
-/* Responsiveness adjustments */
-@media screen and (max-width: 992px) {
-  .container {
-    flex-direction: column;
-    text-align: center;
-  }
-  
-  .content {
-    max-width: 100%;
-    margin-bottom: 3rem;
-  }
-  
-  .buttons {
-    justify-content: center;
-  }
-  
-  .statistics {
-    flex-wrap: wrap;
-    gap: 1.5rem;
-    margin: 0 2rem;
-  }
-  
-  .statItem {
-    flex-basis: 40%;
-  }
-  
-  .title {
-    font-size: 3.2rem;
-  }
-}
-
-@media screen and (max-width: 768px) {
-  .hero {
-    padding-top: 80px;
-  }
-  
-  .title {
-    font-size: 2.5rem;
-  }
-  
-  .subtitle {
-    font-size: 1.1rem;
-  }
-  
-  .statistics {
-    bottom: -100px;
-    padding: 1.8rem;
-  }
-  
-  .statItem {
-    flex-basis: 100%;
-    margin-bottom: 1.2rem;
-  }
-  
-  .statItem h3 {
-    font-size: 2.2rem;
-  }
-  
-  .shape3, .shape4 {
-    display: none;
-  }
-}
-.secondaryButton {
-  background-color: transparent;
-  color: #0000ff;
-  border: 2px solid #0000ff;
-  padding: 1.1rem 2.2rem;
-  border-radius: 8px;
-  font-weight: 600;
-  text-decoration: none;
-  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-  box-shadow: 0 15px 25px rgba(0, 0, 255, 0.2);
-  position: relative;
-  overflow: hidden;
-  animation: buttonFloat 3s ease-in-out infinite;
-}
-
-.secondaryButton:hover {
-  background-color: rgba(0, 0, 255, 0.05);
-  transform: translateY(-5px) scale(1.05);
-  box-shadow: 0 20px 30px rgba(0, 0, 255, 0.3);
-}
-
-/* Cross-shaped bubble */
-.secondaryButton::before {
-  content: '';
-  position: absolute;
-  width: 15px;
-  height: 15px;
-  background-color: #f97316;
-  top: 10px;
-  left: 20px;
-  clip-path: polygon(0% 40%, 40% 40%, 40% 0%, 60% 0%, 60% 40%, 100% 40%, 100% 60%, 60% 60%, 60% 100%, 40% 100%, 40% 60%, 0% 60%);
-  animation: crossBubbleFloat 7s linear infinite;
-}
-
-/* Book-shaped bubble */
-.secondaryButton::after {
-  content: '';
-  position: absolute;
-  width: 20px;
-  height: 20px;
-  background-color:red;
-  bottom: 15px;
-  right: 20px;
-  border-radius: 100%;
-  transform: perspective(100px) rotateY(-15deg);
-  clip-path: polygon(0% 0%, 85% 0%, 100% 15%, 100% 100%, 0% 100%);
-  animation: bookBubbleFloat 8s linear infinite reverse;
-}
-
-/* Add additional bubbles with pseudo elements from spans */
-.secondaryButton span {
-  position: relative;
-  z-index: 2;
-}
-
-.secondaryButton:hover::before {
-  animation-duration: 3s;
-}
-
-.secondaryButton:hover::after {
-  animation-duration: 4s;
-}
-
 @keyframes buttonFloat {
   0%, 100% {
     transform: translateY(0);
@@ -660,5 +527,184 @@
   100% {
     transform: translate(0, 0) perspective(100px) rotateY(-15deg) scale(1);
     opacity: 0.15;
+  }
+}
+
+@media screen and (max-width: 992px) {
+  .hero {
+    padding: 80px 0 80px;
+    margin-top: 60px;
+    margin-bottom: 40px;
+    height: fit-content;
+  }
+  
+  .container {
+    flex-direction: column;
+    text-align: center;
+    padding: 0 3rem;
+    gap: 3.5rem;
+  }
+  
+  .content {
+    max-width: 650px;
+    margin-bottom: 0;
+  }
+  
+  .buttons {
+    justify-content: center;
+    margin-top: 2rem;
+    gap: 2rem;
+    margin-bottom: 1.5rem;
+  }
+  
+  .statistics {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1.5rem;
+    margin: 0 3rem;
+    margin-top: 3rem;
+    padding: 2.5rem 2rem;
+    bottom: -15px;
+  }
+  
+  .statItem {
+    flex-basis: 45%;
+    margin: 0.5rem;
+  }
+  
+  .title {
+    font-size: 3.2rem;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .hero {
+    padding: 70px 0 60px;
+    margin-top: 55px;
+    margin-bottom: 40px;
+  }
+  
+  .container {
+    margin-top: 70px;
+    padding: 0 1.5rem;
+    height: 60vh;
+    gap: 0;
+  }
+  
+  .content {
+    padding: 0 0.5rem;
+  }
+  
+  .title {
+
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+  }
+  
+  .subtitle {
+    font-size: 1.1rem;
+    margin-bottom: 3rem;
+  }
+  
+  .buttons {
+    flex-direction: column;
+    gap: 1.5rem;
+    width: 100%;
+    max-width: 280px;
+    margin: 0 auto;
+    margin-bottom: 2rem;
+  }
+  
+  .primaryButton {
+    width: 100%;
+    text-align: center;
+    padding: 1rem 1.5rem;
+    margin-bottom: 20px;
+  }
+   .secondaryButton {
+    width: 100%;
+    text-align: center;
+    padding: 1rem 1.5rem;
+  }
+  
+  .statistics {
+    padding: 2rem 1rem;
+    margin: 0 1rem;
+    margin-top: 2rem;
+    gap: 1rem;
+    bottom: -10px;
+  }
+  
+  .statItem {
+    flex-basis: 100%;
+    margin: 0.5rem 0;
+    padding: 1rem;
+  }
+  
+  .statItem h3 {
+    font-size: 2.2rem;
+  }
+  
+  .imageContainer {
+    width: 100%;
+    margin-bottom: 0;
+  }
+  
+  .image {
+    width: 90%;
+  }
+  
+  .shape3, .shape4 {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .hero {
+    padding: 50px 0 40px;
+    margin-top: 50px;
+    margin-bottom: 40px;
+  }
+  
+  .container {
+    padding: 0 1rem;
+    gap: 4.5rem;
+  }
+  
+  .title {
+    font-size: 2rem;
+    margin-bottom: 1.2rem;
+  }
+  
+  .subtitle {
+    font-size: 1rem;
+    margin-bottom: 1.5rem;
+    line-height: 1.6;
+  }
+  
+  .buttons {
+    max-width: 240px;
+    gap: 1.2rem;
+    margin-bottom: 2.5rem;
+  }
+  
+  .statistics {
+    padding: 1.5rem 1rem;
+    margin: 0 0.5rem;
+    margin-top: 1.5rem;
+    bottom: 0;
+  }
+  
+  .statItem {
+    padding: 0.8rem;
+    margin-bottom: 0;
+  }
+  
+  .statItem h3 {
+    font-size: 1.8rem;
+  }
+  
+  .statItem p {
+    font-size: 0.9rem;
   }
 }
