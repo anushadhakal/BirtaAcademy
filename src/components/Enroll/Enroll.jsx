@@ -1,14 +1,14 @@
 import React, { useState, useEffect } from 'react';
-import ReCAPTCHA from "react-google-recaptcha";
 import styles from './Enroll.module.css';
 
 const EnrollmentModal = ({ isOpen, onClose }) => {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [phone, setPhone] = useState("");
+  const [address, setAddress] = useState("");
   const [course, setCourse] = useState("");
+  const [learningMode, setLearningMode] = useState("online");
   const [message, setMessage] = useState("");
-  const [verified, setVerified] = useState(false);
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [formStatus, setFormStatus] = useState(null);
 
@@ -24,26 +24,18 @@ const EnrollmentModal = ({ isOpen, onClose }) => {
     };
   }, [isOpen]);
 
-  const handleRecaptchaChange = (value) => {
-    setVerified(!!value);
-  };
-
   const resetForm = () => {
     setName('');
     setEmail('');
     setPhone('');
+    setAddress('');
     setCourse('');
+    setLearningMode('online');
     setMessage('');
-    setVerified(false);
   };
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    if (!verified) {
-      alert("Please verify that you are not a robot");
-      return;
-    }
-
     setIsSubmitting(true);
     
     try {
@@ -56,7 +48,9 @@ const EnrollmentModal = ({ isOpen, onClose }) => {
           name,
           email,
           phone,
+          address,
           course,
+          learningMode,
           message,
         }),
       });
@@ -130,6 +124,18 @@ const EnrollmentModal = ({ isOpen, onClose }) => {
                   />
                 </div>
                 <div className={styles.formGroup}>
+                  <label htmlFor="address">Address</label>
+                  <input
+                    type="text"
+                    id="address"
+                    name="address"
+                    value={address}
+                    onChange={(e) => setAddress(e.target.value)}
+                    required
+                    placeholder="Enter your full address"
+                  />
+                </div>
+                <div className={styles.formGroup}>
                   <label htmlFor="course">Select Course</label>
                   <select
                     id="course"
@@ -159,17 +165,38 @@ const EnrollmentModal = ({ isOpen, onClose }) => {
                   ></textarea>
                 </div>
                 
-                <div className={styles.recaptchaContainer}>
-                  <ReCAPTCHA
-                    sitekey="6LeIxAcTAAAAAJcZVRqyHh71UMIEGNQ_MXjiZKhI"
-                    onChange={handleRecaptchaChange}
-                  />
+                <div className={styles.formGroup}>
+                  <label>Preferred Learning Mode</label>
+                  <div className={styles.radioGroup}>
+                    <div className={styles.radioOption}>
+                      <input
+                        type="radio"
+                        id="online"
+                        name="learningMode"
+                        value="online"
+                        checked={learningMode === "online"}
+                        onChange={() => setLearningMode("online")}
+                      />
+                      <label htmlFor="online">Online Classes</label>
+                    </div>
+                    <div className={styles.radioOption}>
+                      <input
+                        type="radio"
+                        id="physical"
+                        name="learningMode"
+                        value="physical"
+                        checked={learningMode === "physical"}
+                        onChange={() => setLearningMode("physical")}
+                      />
+                      <label htmlFor="physical">Physical Classes</label>
+                    </div>
+                  </div>
                 </div>
                 
                 <button 
                   type="submit" 
                   className={styles.submitButton}
-                  disabled={isSubmitting || !verified}
+                  disabled={isSubmitting}
                 >
                   {isSubmitting ? 'Submitting...' : 'Submit Application'}
                 </button>

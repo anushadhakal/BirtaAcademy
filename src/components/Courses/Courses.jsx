@@ -30,7 +30,7 @@ const Courses = () => {
     {
       id: 2,
       title: 'Mobile Application Development',
-      description: 'Build beautiful native apps for Android and iOS with a single codebase using Flutter and Dart.',
+      description: 'Build beautiful native apps for Android and iOS',
       // price: 'Rs. 35,000',
       duration: '3 months',
       category: 'mobile',

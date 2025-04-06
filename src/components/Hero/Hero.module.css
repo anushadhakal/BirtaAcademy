@@ -163,17 +163,6 @@
   box-shadow: 0 20px 30px rgba(0, 0, 255, 0.3);
 }
 
-.secondaryButton::before {
-  content: '';
-  position: absolute;
-  width: 15px;
-  height: 15px;
-  background-color: #f97316;
-  top: 10px;
-  left: 20px;
-  clip-path: polygon(0% 40%, 40% 40%, 40% 0%, 60% 0%, 60% 40%, 100% 40%, 100% 60%, 60% 60%, 60% 100%, 40% 100%, 40% 60%, 0% 60%);
-  animation: crossBubbleFloat 7s linear infinite;
-}
 
 .secondaryButton::after {
   content: '';
