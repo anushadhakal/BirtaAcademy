@@ -39,7 +39,7 @@ const EnrollmentModal = ({ isOpen, onClose }) => {
     setIsSubmitting(true);
     
     try {
-      const response = await fetch("https://formspree.io/f/mblgzngb", {
+      const response = await fetch("https://formspree.io/f/mdkepalw", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
