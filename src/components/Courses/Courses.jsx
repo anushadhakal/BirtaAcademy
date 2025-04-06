@@ -1,9 +1,9 @@
 import React, { useState } from 'react';
 import styles from './Courses.module.css';
 import CourseDetails from '../CourseDetail/CourseDetail';
-import fullStack from '../../assets/fullstack8.jpg';
+import fullStack from '../../assets/fullstack.jpg';
 import mobileApp from '../../assets/mobileimage.avif';
-import graphicsDesign from '../../assets/graphics1.jpg';
+import graphicsDesign from '../../assets/graphics.jpg';
 
 const Courses = () => {
   const [activeCategory, setActiveCategory] = useState('all');
