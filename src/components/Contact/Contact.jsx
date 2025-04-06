@@ -31,7 +31,9 @@ const ContactUs = () => {
   };
 
   return (
-    <section id="contact" className={styles.contactSection}>
+    <div id="contact">
+
+    <section  className={styles.contactSection}>
       <div className={styles.container}>
         <div className={styles.contactHeader}>
           <h2><span > Get </span>In Touch</h2>
@@ -85,7 +87,7 @@ const ContactUs = () => {
                     onChange={handleChange}
                     placeholder="Your Name"
                     required
-                  />
+                    />
                 </div>
                 <div className={styles.formGroup}>
                   <input
@@ -95,7 +97,7 @@ const ContactUs = () => {
                     onChange={handleChange}
                     placeholder="Your Email"
                     required
-                  />
+                    />
                 </div>
               </div>
               
@@ -107,7 +109,7 @@ const ContactUs = () => {
                     value={formData.phone}
                     onChange={handleChange}
                     placeholder="Your Phone"
-                  />
+                    />
                 </div>
                 <div className={styles.formGroup}>
                   <input
@@ -117,7 +119,7 @@ const ContactUs = () => {
                     onChange={handleChange}
                     placeholder="Subject"
                     required
-                  />
+                    />
                 </div>
               </div>
               
@@ -129,7 +131,7 @@ const ContactUs = () => {
                   placeholder="Your Message"
                   required
                   rows="6"
-                ></textarea>
+                  ></textarea>
               </div>
               
               <button type="submit" className={styles.submitBtn}>
@@ -140,6 +142,7 @@ const ContactUs = () => {
         </div>
       </div>
     </section>
+                  </div>
   );
 };
 

@@ -176,7 +176,7 @@
       top: 100%;
       left: 0;
       right: 0;
-      background-color: #ffffff;
+      background-color: #0000ff;
       flex-direction: column;
       align-items: center;
       box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
@@ -191,7 +191,7 @@
   }
   
   .navLinks.active a {
-      color: #0000ff;
+      color: white;
   }
   
   .navLinks.active .navItem {
@@ -236,7 +236,7 @@
   .enrollButton {
       padding: 0.6rem 1.2rem;
       font-size: 0.9rem;
-      width: 20%;
+      width: 30%;
       max-width: 200px;
       margin: 0.5rem auto;
       display: block;
@@ -260,7 +260,7 @@
   .enrollButton {
       padding: 0.5rem 1rem;
       font-size: 0.85rem;
-      width: 80%;
+      width: 30%;
   }
 }
 
@@ -268,7 +268,7 @@
   .enrollButton {
       padding: 0.4rem 0.8rem;
       font-size: 0.8rem;
-      width: 90%;
+      width: 30%;
   }
   
   .logo {

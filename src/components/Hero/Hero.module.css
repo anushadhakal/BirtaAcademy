@@ -621,7 +621,7 @@
 @media screen and (max-width: 768px) {
   .hero {
     padding: 30px 60px 0 60px;
-    margin-top: 55px;
+    margin-top: 35px;
     ;
   }
   
@@ -638,7 +638,7 @@
   
   .title {
 
-    font-size: 2.5rem;
+    font-size: 2.8rem;
     margin-bottom: 2rem;
   }
   
@@ -695,15 +695,13 @@
     width: 90%;
   }
   
-  .shape3, .shape4 {
-    display: none;
-  }
+
 }
 
 @media screen and (max-width: 480px) {
   .hero {
     padding: 50px 0 40px;
-    margin-top: 50px;
+    margin-top: 25px;
     margin-bottom: 40px;
   }
   
@@ -713,7 +711,7 @@
   }
   
   .title {
-    font-size: 2rem;
+    font-size: 2.8rem;
     margin-bottom: 1.2rem;
   }
   

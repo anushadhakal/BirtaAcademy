@@ -99,9 +99,9 @@ const Courses = () => {
         <div className={styles.categories}>
           {categories.map(category => (
             <button 
-              key={category.id} 
-              className={`${styles.categoryButton} ${activeCategory === category.id ? styles.active : ''}`}
-              onClick={() => setActiveCategory(category.id)}
+            key={category.id} 
+            className={`${styles.categoryButton} ${activeCategory === category.id ? styles.active : ''}`}
+            onClick={() => setActiveCategory(category.id)}
             >
               {category.name}
             </button>
@@ -130,7 +130,7 @@ const Courses = () => {
                 <button 
                   className={styles.viewCourseButton}
                   onClick={() => handleViewCourse(course)}
-                >
+                  >
                   View Course
                 </button>
               </div>
@@ -142,8 +142,8 @@ const Courses = () => {
       {/* Course Details Modal */}
       {selectedCourse && (
         <CourseDetails 
-          course={selectedCourse} 
-          onClose={handleCloseModal} 
+        course={selectedCourse} 
+        onClose={handleCloseModal} 
         />
       )}
     </section>
