@@ -37,7 +37,7 @@ const Footer = () => {
                 <li><a href="#home">Home</a></li>
                 <li><a href="#about">About Us</a></li>
                 <li><a href="#courses">Courses</a></li>
-                <li><a href="#testimonials">Testimonials</a></li>
+                {/* <li><a href="#testimonials">Testimonials</a></li> */}
                 <li><a href="#contact">Contact</a></li>
               </ul>
             </div>
@@ -45,11 +45,9 @@ const Footer = () => {
             <div className={styles.linkColumn}>
               <h4 className={styles.linkTitle}>Courses</h4>
               <ul className={styles.links}>
-                <li><a href="#web">Web Development</a></li>
-                <li><a href="#mobile">Mobile App Development</a></li>
-                <li><a href="#data">Data Science</a></li>
-                <li><a href="#design">UI/UX Design</a></li>
-                <li><a href="#ai">Artificial Intelligence</a></li>
+                <li><a href="#courses">Full Stack Web Development</a></li>
+                <li><a href="#courses">Mobile Application Development</a></li>
+                <li><a href="#courses">Graphics Design</a></li>
               </ul>
             </div>
             
@@ -58,7 +56,7 @@ const Footer = () => {
               <ul className={styles.contactInfo}>
                 <li>
                   <i className="fas fa-map-marker-alt"></i>
-                  <span>Pokhara, Nepal</span>
+                  <span>Newroad Pokhara, Nepal</span>
                 </li>
                 <li>
                   <i className="fas fa-phone-alt"></i>
@@ -70,7 +68,7 @@ const Footer = () => {
                 </li>
                 <li>
                   <i className="fas fa-clock"></i>
-                  <span>Sun - Fri: 9:00 AM - 6:00 PM</span>
+                  <span>Sun - Fri: 10:00 AM - 6:00 PM</span>
                 </li>
               </ul>
             </div>
@@ -80,6 +78,9 @@ const Footer = () => {
         <div className={styles.footerBottom}>
           <p className={styles.copyright}>
             &copy; {currentYear} Birta Academy. All Rights Reserved.
+          </p> 
+          <p  className={styles.copyright}>
+            Powered By: Birta Soft
           </p>
           
         </div>

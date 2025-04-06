@@ -1,4 +1,4 @@
-// components/Testimonials/Testimonials.jsx
+/*
 import React, { useState, useEffect } from 'react';
 import styles from './Testimonials.module.css';
 
@@ -9,7 +9,7 @@ const Testimonials = () => {
   const testimonials = [
     {
       id: 1,
-      name: 'Shital Aryal',
+      name: 'Shital Sharma',
       role: 'Web Developer',
       company: 'TechSolutions',
       image: 'https://placehold.co/600x400',
@@ -136,3 +136,4 @@ const Testimonials = () => {
 };
 
 export default Testimonials;
+*/

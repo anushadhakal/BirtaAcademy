@@ -1,6 +1,9 @@
 import React, { useState } from 'react';
 import styles from './Courses.module.css';
 import CourseDetails from '../CourseDetail/CourseDetail';
+import fullStack from '../../assets/fullstack8.jpg';
+import mobileApp from '../../assets/mobileimage.avif';
+import graphicsDesign from '../../assets/graphics1.jpg';
 
 const Courses = () => {
   const [activeCategory, setActiveCategory] = useState('all');
@@ -10,8 +13,8 @@ const Courses = () => {
     { id: 'all', name: 'All Courses' },
     { id: 'web', name: 'Web Development' },
     { id: 'mobile', name: 'Mobile App' },
-    { id: 'data', name: 'Data Science' },
-    { id: 'design', name: 'UI/UX Design' },
+    // { id: 'data', name: 'Data Science' },
+    { id: 'design', name: 'Graphics Design' },
   ];
 
   const courses = [
@@ -19,56 +22,56 @@ const Courses = () => {
       id: 1,
       title: 'Full Stack Web Development',
       description: 'Learn HTML, CSS, JavaScript, React, Node.js, and MongoDB to become a complete web developer.',
-      price: 'Rs. 40,000',
-      duration: '4 months',
+      // price: 'Rs. 40,000',
+      duration: '3 months',
       category: 'web',
-      image: 'https://placehold.co/600x400',
+      image: fullStack,
     },
     {
       id: 2,
-      title: 'Mobile App Development with Flutter',
+      title: 'Mobile Application Development',
       description: 'Build beautiful native apps for Android and iOS with a single codebase using Flutter and Dart.',
-      price: 'Rs. 35,000',
+      // price: 'Rs. 35,000',
       duration: '3 months',
       category: 'mobile',
-      image: 'https://placehold.co/600x400',
+      image: mobileApp,
     },
-    {
-      id: 3,
-      title: 'Data Science and Machine Learning',
-      description: 'Master data analysis, visualization, and machine learning with Python, Pandas, and TensorFlow.',
-      price: 'Rs. 45,000',
-      duration: '5 months',
-      category: 'data',
-      image: 'https://placehold.co/600x400',
-    },
+    // {
+    //   id: 3,
+    //   title: 'Data Science and Machine Learning',
+    //   description: 'Master data analysis, visualization, and machine learning with Python, Pandas, and TensorFlow.',
+    //   price: 'Rs. 45,000',
+    //   duration: '5 months',
+    //   category: 'data',
+    //   image: 'https://placehold.co/600x400',
+    // },
     {
       id: 4,
-      title: 'UI/UX Design Fundamentals',
-      description: 'Learn design principles, user research, wireframing, and prototyping with Figma and Adobe XD.',
-      price: 'Rs. 30,000',
+      title: 'Graphics Design Fundamentals',
+      description: 'Learn design principles, user research, and  with Adobe Photo Shop.',
+      // price: 'Rs. 30,000',
       duration: '3 months',
       category: 'design',
-      image: 'https://placehold.co/600x400',
-    },
-    {
-      id: 5,
-      title: 'Frontend Development with React',
-      description: 'Master modern frontend development with React, Redux, and related tools and libraries.',
-      price: 'Rs. 28,000',
-      duration: '2.5 months',
-      category: 'web',
-      image: 'https://placehold.co/600x400',
-    },
-    {
-      id: 6,
-      title: 'Backend Development with Node.js',
-      description: 'Build robust server-side applications with Node.js, Express, and MongoDB.',
-      price: 'Rs. 32,000',
-      duration: '3 months',
-      category: 'web',
-      image: 'https://placehold.co/600x400',
-    },
+      image: graphicsDesign,
+    }
+    // {
+    //   id: 5,
+    //   title: 'Frontend Development with React',
+    //   description: 'Master modern frontend development with React, Redux, and related tools and libraries.',
+    //   price: 'Rs. 28,000',
+    //   duration: '2.5 months',
+    //   category: 'web',
+    //   image: 'https://placehold.co/600x400',
+    // },
+    // {
+    //   id: 6,
+    //   title: 'Backend Development with Node.js',
+    //   description: 'Build robust server-side applications with Node.js, Express, and MongoDB.',
+    //   price: 'Rs. 32,000',
+    //   duration: '3 months',
+    //   category: 'web',
+    //   image: 'https://placehold.co/600x400',
+    // },
   ];
 
   const filteredCourses = activeCategory === 'all' 
@@ -119,10 +122,10 @@ const Courses = () => {
                     <i className="far fa-clock"></i>
                     <span>{course.duration}</span>
                   </div>
-                  <div className={styles.courseInfoItem}>
-                    <i className="fas fa-tag"></i>
-                    <span>{course.price}</span>
-                  </div>
+                  {/* <div className={styles.courseInfoItem}> */}
+                    {/* <i className="fas fa-tag"></i> */}
+                    {/* <span>{course.price}</span> */}
+                  {/* </div> */}
                 </div>
                 <button 
                   className={styles.viewCourseButton}

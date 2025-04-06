@@ -154,7 +154,7 @@
   background-color: transparent;
   color: #0000ff;
   border: 2px solid #0000ff;
-  animation: buttonFloat 3s ease-in-out infinite;
+  /* animation: buttonFloat 3s ease-in-out infinite; */
 }
 
 .secondaryButton:hover {
@@ -200,6 +200,59 @@
 
 .secondaryButton:hover::after {
   animation-duration: 4s;
+}
+.secondaryButton {
+  background-color: transparent;
+  color: #0000ff;
+  border: 2px solid #0000ff;
+  padding: 1.1rem 2.2rem;
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: 1rem;
+  text-decoration: none;
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+  animation: buttonPulseForward 2s ease-in-out infinite;
+}
+
+.secondaryButton:hover {
+  background-color: rgba(0, 0, 255, 0.05);
+  transform: translateY(-5px) scale(1.05);
+  box-shadow: 0 20px 30px rgba(0, 0, 255, 0.3);
+  animation-play-state: paused; 
+}
+
+.secondaryButton::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+  transition: 0.5s;
+}
+
+.secondaryButton:hover::before {
+  left: 100%;
+}
+
+@keyframes buttonPulseForward {
+  0% {
+    transform: translateZ(0) scale(1);
+    box-shadow: 0 8px 15px rgba(0, 0, 255, 0.1);
+  }
+  50% {
+    transform: translateZ(15px) scale(1.03);
+    box-shadow: 0 12px 20px rgba(0, 0, 255, 0.2);
+  }
+  100% {
+    transform: translateZ(0) scale(1);
+    box-shadow: 0 8px 15px rgba(0, 0, 255, 0.1);
+  }
 }
 
 .imageContainer {

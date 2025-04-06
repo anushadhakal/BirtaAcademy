@@ -4,7 +4,7 @@ import Navbar from './components/Navbar/Navbar';
 import Hero from './components/Hero/Hero';
 import Courses from './components/Courses/Courses';
 import Enroll from './components/Enroll/Enroll';
-import Testimonials from './components/Testimonials/Testimonials';
+// import Testimonials from './components/Testimonials/Testimonials';
 import Contact from './components/Contact/Contact';
 import Footer from './components/Footer/Footer';
 import './App.css';
@@ -18,7 +18,7 @@ function App() {
       <About/>
       <Courses />
       <Enroll />
-      <Testimonials />
+      {/* <Testimonials /> */}
       <Contact/>
       <Footer />
     </div>

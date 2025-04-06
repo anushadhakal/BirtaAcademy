@@ -1,8 +1,19 @@
-import React from "react";
+import React, { useState } from "react";
 import styles from "./Hero.module.css";
 import image from "../../assets/cuteGirl7.jpg"; // Adjust the path as necessary
+import EnrollmentModal from "../Enroll/Enroll"; // Adjust this import path to match your file structure
 
 const Hero = () => {
+  const [isModalOpen, setIsModalOpen] = useState(false);
+
+  const openModal = () => {
+    setIsModalOpen(true);
+  };
+
+  const closeModal = () => {
+    setIsModalOpen(false);
+  };
+
   return (
     <section id="home" className={styles.hero}>
       <div className={styles.overlay}></div>
@@ -20,9 +31,12 @@ const Hero = () => {
             <a href="#courses" className={styles.primaryButton}>
               Explore Courses
             </a>
-            <a href="#enroll" className={styles.secondaryButton}>
+            <button 
+              onClick={openModal} 
+              className={styles.secondaryButton}
+            >
               Enroll Now
-            </a>
+            </button>
           </div>
         </div>
         <div className={styles.imageContainer}>
@@ -50,6 +64,12 @@ const Hero = () => {
           </a>
         </div>
       </div>
+      
+      {/* Include the EnrollmentModal component */}
+      <EnrollmentModal 
+        isOpen={isModalOpen} 
+        onClose={closeModal} 
+      />
     </section>
   );
 };

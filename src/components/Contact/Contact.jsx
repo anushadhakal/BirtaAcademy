@@ -47,7 +47,7 @@ const ContactUs = () => {
               </div>
               <div className={styles.infoContent}>
                 <h3>Our Location</h3>
-                <p>Pokhara, Nepal</p>
+                <p>Newroad Pokhara, Nepal</p>
               </div>
             </div>
             

@@ -8,24 +8,24 @@ const About = () => {
   const stats = [
     {
       icon: <FaUserGraduate />,
-      number: "500+",
+      number: "1st Batch Loading...",
       text: "Students Enrolled"
     },
     {
       icon: <FaChalkboardTeacher />,
-      number: "15+",
+      number: "3+",
       text: "Expert Instructors"
     },
     {
       icon: <FaBook />,
-      number: "10+",
+      number: "3+",
       text: "Professional Courses"
     },
-    {
-      icon: <FaChartLine />,
-      number: "95%",
-      text: "Success Rate"
-    }
+    // {
+    //   icon: <FaChartLine />,
+    //   number: "95%",
+    //   text: "Success Rate"
+    // }
   ];
   
   return (
@@ -46,7 +46,9 @@ const About = () => {
           <h2 className={styles.aboutTitle}>About <span>Us</span> </h2>
           <div className={styles.separator}></div>
           <p className={styles.aboutText}>
-          Birta Academy is dedicated to shaping young minds for the future by nurturing creativity, critical thinking, and problem-solving skills. We offer engaging and interactive learning experiences in subjects like coding, robotics, mathematics, and science. Our curriculum is designed to make learning fun and accessible, helping students build a strong foundation in technology and innovation. From developing apps and exploring AI to mastering essential academic skills, Birta Academy empowers learners to thrive in an ever-evolving digital world.
+          Birta Academy is a place where creativity meets technology. We help students build real skills in Full Stack Web Development, Mobile Application Development, and Graphics Designing. Our courses are hands-on, beginner-friendly, and focused on practical learning. <br />
+
+          Whether you want to create websites, build mobile apps, or design eye-catching graphics, we guide you every step of the way. Our goal is to make learning fun, engaging, and useful for the real world. At Birta Academy, we don’t just teach skills—we help you build a future in the digital world.
           </p>
         </div>
       </div>
