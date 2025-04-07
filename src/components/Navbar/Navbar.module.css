@@ -29,29 +29,11 @@
 }
 
 .logo {
-  height: 60px;
-  width: 80px;
+  height: 43px;
+  width: 119px;
   margin-right: 10px;
-  background-color: white;
-  border: 1px solid black;
-  border-radius: 50%;
 }
 
-.logo img {
-  height: 100%;
-  width: 100%;
-  object-fit: contain;
-}
-
-.brandName {
-  font-size: 1.5rem;
-  font-weight: 700;
-  color: white;
-}
-
-.brandName span {
-  color: rgb(255, 184, 3);
-}
 
 .navLinks {
   display: flex;
@@ -236,7 +218,7 @@
   .enrollButton {
       padding: 0.6rem 1.2rem;
       font-size: 0.9rem;
-      width: 30%;
+      width: 20%;
       max-width: 200px;
       margin: 0.5rem auto;
       display: block;
@@ -253,14 +235,14 @@
   }
   
   .logo {
-      height: 50px;
-      width: 65px;
+      height: 40px;
+      width: 90px;
   }
   
   .enrollButton {
       padding: 0.5rem 1rem;
       font-size: 0.85rem;
-      width: 30%;
+      width: 20%;
   }
 }
 
@@ -273,6 +255,6 @@
   
   .logo {
       height: 40px;
-      width: 55px;
+      width: 80px;
   }
 }

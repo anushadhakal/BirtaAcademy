@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import styles from './Navbar.module.css';
-import logo from '../../assets/logo.png';
+import logo from '../../assets/birtaLogo.png';
 import EnrollmentModal from '../Enroll/Enroll';
 
 const Navbar = () => {
@@ -46,7 +46,6 @@ const Navbar = () => {
             <div className={styles.logo}>
               <img src={logo} alt="Birta Academy Logo" />
             </div>
-            <span className={styles.brandName}>Birta <span> Academy </span> </span>
           </div>
           <div className={`${styles.mobileMenuButton} ${menuOpen ? styles.open : ''}`} onClick={toggleMenu}>
             <div className={styles.bar}></div>

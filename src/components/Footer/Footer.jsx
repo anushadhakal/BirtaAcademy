@@ -66,10 +66,6 @@ const Footer = () => {
                   <i className="fas fa-envelope"></i>
                   <span>info@birtasoft.com</span>
                 </li>
-                <li>
-                  <i className="fas fa-clock"></i>
-                  <span>Sun - Fri: 10:00 AM - 6:00 PM</span>
-                </li>
               </ul>
             </div>
           </div>
