@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import styles from "./Hero.module.css";
-import image from "../../assets/cuteGirl1.webp"; 
+import image from "../../assets/cuteGirl10.webp"; 
 import EnrollmentModal from "../Enroll/Enroll"; 
 
 const Hero = () => {
