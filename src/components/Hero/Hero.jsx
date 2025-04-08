@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import styles from "./Hero.module.css";
-import image from "../../assets/cuteGirl7.jpg"; // Adjust the path as necessary
-import EnrollmentModal from "../Enroll/Enroll"; // Adjust this import path to match your file structure
+import image from "../../assets/cuteGirl1.webp"; 
+import EnrollmentModal from "../Enroll/Enroll"; 
 
 const Hero = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -65,7 +65,6 @@ const Hero = () => {
         </div>
       </div>
       
-      {/* Include the EnrollmentModal component */}
       <EnrollmentModal 
         isOpen={isModalOpen} 
         onClose={closeModal} 

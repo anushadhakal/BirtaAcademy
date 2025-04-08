@@ -133,7 +133,7 @@ const EnrollmentModal = ({ isOpen, onClose }) => {
                   />
                 </div>
                 <div className={styles.formGroup}>
-                  <label htmlFor="address">Address</label>
+                  <label htmlFor="address">Address (City/District)</label>
                   <input
                     type="text"
                     id="address"
@@ -161,7 +161,7 @@ const EnrollmentModal = ({ isOpen, onClose }) => {
                 </div>
 
                 <div className={styles.formGroup}>
-                  <label className={styles.sectionLabel}>What is your current education level?*</label>
+                  <label className={styles.sectionLabel}>What is your current education level?</label>
                   <div className={styles.optionsContainer}>
                     <div className={styles.radioOption}>
                       <input
@@ -212,7 +212,7 @@ const EnrollmentModal = ({ isOpen, onClose }) => {
                 </div>
 
                 <div className={styles.formGroup}>
-                  <label className={styles.sectionLabel}>Have you taken any IT-related courses before?*</label>
+                  <label className={styles.sectionLabel}>Have you taken any IT-related courses before?</label>
                   <div className={styles.optionsContainer}>
                     <div className={styles.radioOption}>
                       <input
@@ -241,7 +241,7 @@ const EnrollmentModal = ({ isOpen, onClose }) => {
                 </div>
 
                 <div className={styles.formGroup}>
-                  <label className={styles.sectionLabel}>Availability & Learning Preference:*</label>
+                  <label className={styles.sectionLabel}>Availability & Learning Preference</label>
                   <div className={styles.optionsContainer}>
                     <div className={styles.radioOption}>
                       <input
@@ -281,7 +281,7 @@ const EnrollmentModal = ({ isOpen, onClose }) => {
                 </div>
                 
                 <div className={styles.formGroup}>
-                  <label className={styles.sectionLabel}>Preferred Learning Mode*</label>
+                  <label className={styles.sectionLabel}>Preferred Learning Mode</label>
                   <div className={styles.optionsContainer}>
                     <div className={styles.radioOption}>
                       <input

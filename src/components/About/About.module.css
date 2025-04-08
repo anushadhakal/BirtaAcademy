@@ -3,6 +3,7 @@
   padding: 1vh 0 4vh;
   overflow: hidden;
   background-color: #f8f9fa;
+  
 }
 
 @keyframes float {
@@ -204,13 +205,14 @@
 @media (max-width: 768px) {
   .aboutSection {
     padding: 6vh 0 3vh;
+    
   }
   
   .aboutContainer {
     flex-direction: column;
     gap: 6vh;
     width: 95%;
-    padding: 2vh 3vw;
+    
   }
   
   .photoSection {
@@ -247,12 +249,14 @@
 @media (max-width: 480px) {
   .aboutSection {
     padding: 5vh 0 2vh;
+    
   }
   
   
     .aboutContainer {
       width: 100%;
       padding: 2vh 5vw;
+      
     }
     
     .photoSection,

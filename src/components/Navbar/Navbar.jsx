@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import styles from './Navbar.module.css';
-import logo from '../../assets/birtaLogo.png';
+import logo from '../../assets/birtaLogo1.webp';
 import EnrollmentModal from '../Enroll/Enroll';
 
 const Navbar = () => {

@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import styles from './CourseDetail.module.css';
-import EnrollmentModal from '../Enroll/Enroll'; // Adjust import path as needed
+import EnrollmentModal from '../Enroll/Enroll'; 
 
 const CourseDetails = ({ course, onClose }) => {
   const [isClosing, setIsClosing] = useState(false);

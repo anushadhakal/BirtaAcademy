@@ -152,7 +152,9 @@
   .mobileMenuButton {
       display: flex;
   }
-
+.logoContainer{
+  margin-top: 7px ;
+}
   .navLinks {
       position: absolute;
       top: 100%;
@@ -237,6 +239,7 @@
   .logo {
       height: 40px;
       width: 90px;
+      
   }
   
   .enrollButton {
