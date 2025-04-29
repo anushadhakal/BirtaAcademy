@@ -17,15 +17,15 @@ const Footer = () => {
               Birta Academy is a premier coding and technology training institute dedicated to empowering students with cutting-edge skills for the digital economy.
             </p>
             <div className={styles.socialLinks}>
-              <a href="https://www.facebook.com/birtasoft" target = "_blank" className={styles.socialLink}>
+              <a href="https://www.facebook.com/birtaacademy/" target = "_blank" className={styles.socialLink}>
                 <i className="fab fa-facebook-f"></i>
               </a>
-              <a href="https://www.instagram.com/birtasoft_/" target = "_blank" className={styles.socialLink}>
+              <a href="https://www.instagram.com/birtaacademy_/" target = "_blank" className={styles.socialLink}>
                 <i className="fab fa-instagram"></i>
               </a>
-              <a href="https://www.linkedin.com/in/bimalcodes/" target = "_blank" className={styles.socialLink}>
+              {/* <a href="https://www.linkedin.com/in/bimalcodes/" target = "_blank" className={styles.socialLink}>
                 <i className="fab fa-linkedin-in"></i>
-              </a>
+              </a> */}
             </div>
           </div>
           
@@ -59,11 +59,11 @@ const Footer = () => {
                 </li>
                 <li>
                   <i className="fas fa-phone-alt"></i>
-                  <span>9861474074 9703602478</span>
+                  <span>9766051371</span>
                 </li>
                 <li>
                   <i className="fas fa-envelope"></i>
-                  <span>info@birtasoft.com</span>
+                  <span>official.birtaacademy@gmail.com</span>
                 </li>
               </ul>
             </div>
@@ -75,7 +75,7 @@ const Footer = () => {
             &copy; {currentYear} Birta Academy. All Rights Reserved.
           </p> 
           <p  className={styles.copyright}>
-            Powered By: Birta Soft
+            <a href='https://birtasoft.com/' target='_blank'>Powered By: Birta Soft</a>
           </p>
           
         </div>

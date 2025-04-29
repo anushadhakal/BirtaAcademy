@@ -57,8 +57,7 @@ const Contact = () => {
               </div>
               <div className={styles.infoContent}>
                 <h3>Call Us</h3>
-                <p>9861474074</p>
-                <p>9703602478</p>
+                <p>9766051371</p>
               </div>
             </div>
             
@@ -68,7 +67,7 @@ const Contact = () => {
               </div>
               <div className={styles.infoContent}>
                 <h3>Email Us</h3>
-                <p>info@birtasoft.com</p>
+                <p>official.birtaacademy@gmail.com</p>
               </div>
             </div>
           </div>

@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import styles from "./Hero.module.css";
-import image from "../../assets/cuteGirl1.webp"; 
+import image from "../../assets/cuteGirl4.webp"; 
 import EnrollmentModal from "../Enroll/Enroll"; 
 
 const Hero = () => {
@@ -51,7 +51,7 @@ const Hero = () => {
         </div>
         <div>
           <a
-            href={`https://wa.me/9861474074`}
+            href={`https://wa.me/9766051371`}
             className={styles.whatsappFloat} 
             target="_blank"
             rel="noopener noreferrer"
