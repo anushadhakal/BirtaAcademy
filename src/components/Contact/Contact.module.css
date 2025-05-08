@@ -267,3 +267,29 @@
     font-size: 16px;
   }
 }
+/* Add these styles to your existing Contact.module.css file */
+
+.errorText {
+  color: #ff3333;
+  font-size: 0.8rem;
+  margin-top: 4px;
+  display: block;
+}
+
+/* Toast notification custom styles (optional) */
+:global(.Toastify__toast) {
+  border-radius: 8px;
+  font-family: inherit;
+}
+
+:global(.Toastify__toast-body) {
+  font-size: 14px;
+}
+
+:global(.Toastify__toast--success) {
+  background-color: #51a351;
+}
+
+:global(.Toastify__toast--error) {
+  background-color: #bd362f;
+}

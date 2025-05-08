@@ -1,6 +1,8 @@
 // ContactUs.jsx
 import React, { useState } from 'react';
 import styles from './Contact.module.css';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 const Contact = () => {
   const [formData, setFormData] = useState({
@@ -11,16 +13,69 @@ const Contact = () => {
     message: ''
   });
 
+  const [errors, setErrors] = useState({
+    email: '',
+    phone: ''
+  });
+
+  const validateEmail = (email) => {
+    if (!email.endsWith('@gmail.com')) {
+      return 'Email must end with @gmail.com';
+    }
+    return '';
+  };
+
+  const validatePhone = (phone) => {
+    if (phone && (phone.length !== 10 || !/^\d+$/.test(phone))) {
+      return 'Phone number must be exactly 10 digits';
+    }
+    return '';
+  };
+
   const handleChange = (e) => {
     const { name, value } = e.target;
     setFormData(prevState => ({
       ...prevState,
       [name]: value
     }));
+
+    // Clear errors when user starts typing
+    if (name === 'email' || name === 'phone') {
+      setErrors(prev => ({
+        ...prev,
+        [name]: ''
+      }));
+    }
   };
 
   const handleSubmit = (e) => {
     e.preventDefault();
+    
+    // Validate form
+    const emailError = validateEmail(formData.email);
+    const phoneError = validatePhone(formData.phone);
+    
+    if (emailError || phoneError) {
+      setErrors({
+        email: emailError,
+        phone: phoneError
+      });
+      
+      if (emailError) {
+        toast.error(emailError);
+      }
+      
+      if (phoneError) {
+        toast.error(phoneError);
+      }
+      
+      return;
+    }
+
+    // Form is valid - process submission
+    toast.success('Message sent successfully!');
+    
+    // Reset form
     setFormData({
       name: '',
       email: '',
@@ -33,14 +88,16 @@ const Contact = () => {
   return (
     <section id="contact" className={styles.contactSection}>
       <div className={styles.container}>
+        <ToastContainer position="top-right" autoClose={3000} />
+        
         <div className={styles.contactHeader}>
-          <h2><span > Get </span>In Touch</h2>
+          <h2><span>Get</span> In Touch</h2>
           <p>Get in touch with our team for any inquiries.</p>
         </div>
 
         <div className={styles.contactWrapper}>
           <div className={styles.contactInfo}>
-              <h1>For Any <span>Queries</span> </h1>
+              <h1>For Any <span>Queries</span></h1>
             <div className={styles.infoCard}>
               <div className={styles.iconWrapper}>
                 <i className="fas fa-map-marker-alt"></i>
@@ -73,7 +130,6 @@ const Contact = () => {
           </div>
 
           <div className={styles.contactForm}>
-            
             <form onSubmit={handleSubmit}>
               <div className={styles.formRow}>
                 <div className={styles.formGroup}>
@@ -92,9 +148,12 @@ const Contact = () => {
                     name="email"
                     value={formData.email}
                     onChange={handleChange}
-                    placeholder="Your Email"
+                    placeholder="Your Email "
                     required
                   />
+                  {errors.email && (
+                    <span className={styles.errorText}>{errors.email}</span>
+                  )}
                 </div>
               </div>
               
@@ -105,8 +164,12 @@ const Contact = () => {
                     name="phone"
                     value={formData.phone}
                     onChange={handleChange}
-                    placeholder="Your Phone"
+                    placeholder="Your Phone "
+                    required
                   />
+                  {errors.phone && (
+                    <span className={styles.errorText}>{errors.phone}</span>
+                  )}
                 </div>
                 <div className={styles.formGroup}>
                   <input
