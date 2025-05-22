@@ -8,7 +8,7 @@ const About = () => {
   const stats = [
     {
       icon: <FaUserGraduate />,
-      number: "1st Batch Loading...",
+      number: "1st Batch Running",
       text: "Students Enrolled"
     },
     {

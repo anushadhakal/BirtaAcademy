@@ -55,11 +55,11 @@ const Footer = () => {
               <ul className={styles.contactInfo}>
                 <li>
                   <i className="fas fa-map-marker-alt"></i>
-                  <span>Newroad Pokhara, Nepal</span>
+                  <span>Panthi Galli-04, Pokhara</span>
                 </li>
                 <li>
                   <i className="fas fa-phone-alt"></i>
-                  <span>9766051371</span>
+                  <span>9766051371, 9861474074, 9856021350</span>
                 </li>
                 <li>
                   <i className="fas fa-envelope"></i>
