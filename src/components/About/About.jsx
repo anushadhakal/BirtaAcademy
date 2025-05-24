@@ -13,7 +13,7 @@ const About = () => {
     },
     {
       icon: <FaChalkboardTeacher />,
-      number: "3+",
+      number: "5+",
       text: "Expert Instructors"
     },
     {

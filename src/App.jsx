@@ -9,6 +9,7 @@ import Contact from './components/Contact/Contact';
 import Footer from './components/Footer/Footer';
 import './App.css';
 import About from './components/About/About';
+import Map from './components/Locatoin/Map';
 
 function App() {
   return (
@@ -20,6 +21,7 @@ function App() {
       <Enroll />
       {/* <Testimonials /> */}
       <Contact/>
+      <Map/>
       <Footer />
     </div>
   );
