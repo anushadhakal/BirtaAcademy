@@ -104,7 +104,7 @@ const Contact = () => {
               </div>
               <div className={styles.infoContent}>
                 <h3>Our Location</h3>
-                <p>Newroad Pokhara, Nepal</p>
+                <p>Panthi Galli-04, Pokhara</p>
               </div>
             </div>
             
@@ -114,7 +114,7 @@ const Contact = () => {
               </div>
               <div className={styles.infoContent}>
                 <h3>Call Us</h3>
-                <p>9766051371</p>
+                <p>9766051371, 9861474074, 9856021350</p>
               </div>
             </div>
             
